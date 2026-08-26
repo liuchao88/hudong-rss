@@ -30,7 +30,7 @@ UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like 
 TZ = timezone(timedelta(hours=8))  # 北京时间
 
 FEED_TITLE = "A股互动问答关键词监控"
-FEED_LINK = "https://github.com/liuchao88/a-share-qna-watch"
+FEED_LINK = "https://github.com/liuchao88/hudong-rss"
 FEED_DESC = "深交所互动易 + 上证e互动 董秘回答关键词监控（自动生成）"
 
 

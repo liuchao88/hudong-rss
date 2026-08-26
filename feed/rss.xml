@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0"><channel>
 <title>A股互动问答关键词监控</title>
-<link>https://github.com/liuchao88/a-share-qna-watch</link>
+<link>https://github.com/liuchao88/hudong-rss</link>
 <description>深交所互动易 + 上证e互动 董秘回答关键词监控（自动生成）</description>
-<lastBuildDate>Wed, 26 Aug 2026 22:43:46 +0800</lastBuildDate>
+<lastBuildDate>Wed, 26 Aug 2026 23:15:31 +0800</lastBuildDate>
 <item>
 <title>[深交所互动易][深科技000021][存储] 六氟丁二烯8月份，价格接近500万元/吨，生产成本不足100万元/吨，利润非常大，提议公司尽快进行技</title>
 <link>https://irm.cninfo.com.cn/ircs/question/questionDetail?questionId=2340391966938181632</link>
@@ -26,52 +26,45 @@
 <description><b>深交所互动易</b> | 麦捷科技 (300319) | 命中关键词: 存储<br/><b>问:</b> 贵公司你好，我想问下贵公司跟长江存储的关系是怎样的，有给长江存储供货吗？<br/><b>答:</b> 您好，公司与长江存储保持有良好的合作关系。公司长期深耕存储产业链配套元器件的研发生产，针对性开发适配存储厂商需求的元器件，目前电感产品可应用于存储芯片相关的电源管理单元。谢谢！</description>
 </item>
 <item>
-<title>[深交所互动易][麦捷科技300319][存储] 董秘你好，请问公司电感芯片现在竞争格局如何，有没有竞争中替代一些进口产品份额，产品售价是否有所上调？</title>
-<link>https://irm.cninfo.com.cn/ircs/question/questionDetail?questionId=2318158528365776896</link>
-<guid isPermaLink="false">szse_2318158528365776896</guid>
-<pubDate>Wed, 26 Aug 2026 17:58:08 +0800</pubDate>
-<description><b>深交所互动易</b> | 麦捷科技 (300319) | 命中关键词: 存储<br/><b>问:</b> 董秘你好，请问公司电感芯片现在竞争格局如何，有没有竞争中替代一些进口产品份额，产品售价是否有所上调？<br/><b>答:</b> 您好，公司电感产品可应用于存储芯片相关的电源管理单元，现已覆盖部分存储模组与服务器存储配套场景。谢谢！</description>
-</item>
-<item>
 <title>[上证e互动][晶方科技603005][光模块] 晶方科技(603005) Anteryon 2025年营收约2.6亿元，无源器件（非球面透镜、DOE</title>
 <link>https://sns.sseinfo.com/qaDetail.do?stockcode=603005&amp;id=1780137</link>
 <guid isPermaLink="false">sse_1780137</guid>
-<pubDate>Wed, 26 Aug 2026 16:43:45 +0800</pubDate>
+<pubDate>Wed, 26 Aug 2026 17:15:31 +0800</pubDate>
 <description><b>上证e互动</b> | 晶方科技 (603005) | 命中关键词: 光模块<br/><b>问:</b> 晶方科技(603005) Anteryon 2025年营收约2.6亿元，无源器件（非球面透镜、DOE、MLA、平面光学、WLO）与有源器件（激光模块、准直模组）的收入占比分别多少？ Anteryon的Replication技术可量产高精度MLA，赋能CPO高速光模块耦合效率提升。请问FAU配套硅微透镜晶圆封装已向天孚通信送样，目前验证进展如何？预计何时进入小批量？ 全球具备WLO晶圆级光学规模量产的厂商极少。请问Anteryon的WLO产能目前是多少？晶方光电的纳米压印产线产能利用率如何？ 2026年08月17日 08:58<br/><b>答:</b> 相关问题请见前述回复，谢谢您的关注！</description>
 </item>
 <item>
 <title>[上证e互动][晶方科技603005][光模块] 晶方科技(603005) CPO需要外置连续波激光源（ELS），单台交换机需144颗高功率激光器。A</title>
 <link>https://sns.sseinfo.com/qaDetail.do?stockcode=603005&amp;id=1780343</link>
 <guid isPermaLink="false">sse_1780343</guid>
-<pubDate>Wed, 26 Aug 2026 16:43:45 +0800</pubDate>
+<pubDate>Wed, 26 Aug 2026 17:15:31 +0800</pubDate>
 <description><b>上证e互动</b> | 晶方科技 (603005) | 命中关键词: 光模块<br/><b>问:</b> 晶方科技(603005) CPO需要外置连续波激光源（ELS），单台交换机需144颗高功率激光器。Anteryon的激光模块技术是否可用于CPO光引擎中的激光源集成？还是仅聚焦无源耦合器件？ 公司在CPO领域同时布局有源（激光模块）和无源（MLA、WLO）器件，这种&quot;有源+无源&quot;一体化能力是否为差异化优势？目前是否有客户要求提供完整光引擎（有源+无源）封装方案？ 2026年08月17日 13:12<br/><b>答:</b> 您好，相关问题请见前述回复，谢谢您的关注！</description>
 </item>
 <item>
 <title>[上证e互动][晶方科技603005][光模块] 晶方科技(603005) 公司在CPO领域同时布局有源（激光模块）和无源（MLA、WLO）器件，这种</title>
 <link>https://sns.sseinfo.com/qaDetail.do?stockcode=603005&amp;id=1780344</link>
 <guid isPermaLink="false">sse_1780344</guid>
-<pubDate>Wed, 26 Aug 2026 16:43:45 +0800</pubDate>
+<pubDate>Wed, 26 Aug 2026 17:15:31 +0800</pubDate>
 <description><b>上证e互动</b> | 晶方科技 (603005) | 命中关键词: 光模块<br/><b>问:</b> 晶方科技(603005) 公司在CPO领域同时布局有源（激光模块）和无源（MLA、WLO）器件，这种&quot;有源+无源&quot;一体化能力是否为差异化优势？目前是否有客户要求提供完整光引擎（有源+无源）封装方案？ WLO是AR/VR光波导、AI眼镜摄像头的核心器件。请问Anteryon是否已进入苹果Vision Pro、Meta Quest或国内AI眼镜品牌的供应链？该领域2026年预计收入贡献？ 2026年08月17日 13:12<br/><b>答:</b> 您好，请见前述回复，谢谢您的关注！</description>
 </item>
 <item>
 <title>[上证e互动][晶方科技603005][光模块] 晶方科技(603005) 有源器件与CPO光引擎的集成：CPO需要外置连续波激光源（ELS），单台交</title>
 <link>https://sns.sseinfo.com/qaDetail.do?stockcode=603005&amp;id=1780678</link>
 <guid isPermaLink="false">sse_1780678</guid>
-<pubDate>Wed, 26 Aug 2026 16:43:45 +0800</pubDate>
+<pubDate>Wed, 26 Aug 2026 17:15:31 +0800</pubDate>
 <description><b>上证e互动</b> | 晶方科技 (603005) | 命中关键词: 光模块<br/><b>问:</b> 晶方科技(603005) 有源器件与CPO光引擎的集成：CPO需要外置连续波激光源（ELS），单台交换机需144颗高功率激光器。Anteryon的激光模块技术是否可用于CPO光引擎中的激光源集成？还是仅聚焦无源耦合器件？ 有源/无源协同：公司在CPO领域同时布局有源（激光模块）和无源（MLA、WLO）器件，这种&quot;有源+无源&quot;一体化能力是否为差异化优势？目前是否有客户要求提供完整光引擎（有源+无源）封装方案？ 2026年08月18日 10:33<br/><b>答:</b> 您好，晶圆级TSV先进封装、微型光学为公司核心技术与业务构成，其中晶圆级TSV核心工艺包括BONDING last、TSV last、STACK last等核心工艺能力，相关工艺在堆叠、共封等领域有应用前景。微型光学包括混合光学器件、WLO微阵列器件，相关产品在半导体设备、工业智能与自动化、3D传感、智能投射、光互连等领域有应用前景，谢谢您的关注！</description>
 </item>
 <item>
 <title>[上证e互动][佰维存储688525][存储] 佰维存储(688525) 你好，长江存储产业基是公司控股子公司成都态坦测试设备第二大股东，且双方产业</title>
 <link>https://sns.sseinfo.com/qaDetail.do?stockcode=688525&amp;id=1782297</link>
 <guid isPermaLink="false">sse_1782297</guid>
-<pubDate>Wed, 26 Aug 2026 16:43:45 +0800</pubDate>
+<pubDate>Wed, 26 Aug 2026 16:15:31 +0800</pubDate>
 <description><b>上证e互动</b> | 佰维存储 (688525) | 命中关键词: 存储<br/><b>问:</b> 佰维存储(688525) 你好，长江存储产业基是公司控股子公司成都态坦测试设备第二大股东，且双方产业深度绑定，请问长江存储IPO扩产，是否有望给控股公司成都态坦带来设备导入与订单增量？从而间接受益于佰维 2026年08月24日 09:17<br/><b>答:</b> 尊敬的投资者，您好！请以公司公开披露的信息为准。感谢您的关注！</description>
 </item>
 <item>
 <title>[上证e互动][佰维存储688525][存储] 佰维存储(688525) 你好，公司今年多次减持，导致投资者对佰维公司信心大减，公司股价7月是整个科</title>
 <link>https://sns.sseinfo.com/qaDetail.do?stockcode=688525&amp;id=1780056</link>
 <guid isPermaLink="false">sse_1780056</guid>
-<pubDate>Wed, 26 Aug 2026 16:43:45 +0800</pubDate>
+<pubDate>Wed, 26 Aug 2026 16:15:31 +0800</pubDate>
 <description><b>上证e互动</b> | 佰维存储 (688525) | 命中关键词: 存储<br/><b>问:</b> 佰维存储(688525) 你好，公司今年多次减持，导致投资者对佰维公司信心大减，公司股价7月是整个科技板块跌幅榜第一，8月反弹又是倒数第一，这很多原因就是公司喜欢减持导致市场没有信心，请问公司今年下半年还有减持计划吗？(请正面回答，不要用目前没有收到相关股东减持通知这句话来敷衍投资者) 2026年08月17日 09:02<br/><b>答:</b> 尊敬的投资者，您好！请以公司公开披露的信息为准。公司己于2026年7月22日收到控股股东、实际控制人、董事长孙成思先生提交的《关于提议深圳佰维存储科技股份有限公司回购公司股份的函》，并已于2026年8月10日召开董事会审议通过《关于2026年度以集中竞价交易方式回购股份方案的议案》，结合公司当前经营情况、财务状况及未来发展规划，公司拟以自有资金及或自筹资金（含回购专项贷款资金），通过上海证券交易所交易系统以集中竞价交易方式进行股份回购，用于注销并减少注册资本，回购股份的资金总额为人民币2亿元-2.5亿元，具体尚需以股东会审议通过的方案为准。公司将努力提升经营业绩，以实际行动回馈股东，提升股东回报。感谢您的关注！</description>
 </item>
 <item>
