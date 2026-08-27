@@ -15,7 +15,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  fetch:
+  fetch-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -35,17 +35,14 @@ jobs:
           git diff --cached --quiet || git commit -m "update feed $(date -u +%Y-%m-%dT%H:%M:%SZ)"
           git push
 
-  deploy:
-    needs: fetch
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
+      - name: 配置 Pages
+        uses: actions/configure-pages@v5
 
-      - uses: actions/configure-pages@v5
-
-      - uses: actions/upload-pages-artifact@v3
+      - name: 上传产物（用当前工作区，即刚更新的 feed/）
+        uses: actions/upload-pages-artifact@v3
         with:
           path: feed/
 
-      - id: deployment
+      - name: 部署 Pages
         uses: actions/deploy-pages@v4
+        id: deployment
