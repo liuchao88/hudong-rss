@@ -3,7 +3,30 @@
 <title>A股互动问答关键词监控</title>
 <link>https://github.com/liuchao88/hudong-rss</link>
 <description>深交所互动易 + 上证e互动 董秘回答关键词监控（自动生成）</description>
-<lastBuildDate>Tue, 08 Sep 2026 08:48:37 +0800</lastBuildDate>
+<lastBuildDate>Tue, 08 Sep 2026 13:20:38 +0800</lastBuildDate>
+<item>
+<title>[深交所互动易][江波龙301308][存储] 董秘您好，近期Hugging Face推出的Microduck具身智能机器人热销，市场意识到端侧本地</title>
+<link>https://irm.cninfo.com.cn/ircs/question/questionDetail?questionId=2350082023607816192</link>
+<guid isPermaLink="false">szse_2350082023607816192</guid>
+<pubDate>Fri, 04 Sep 2026 18:45:00 +0800</pubDate>
+<description><b>深交所互动易</b> | 江波龙 (301308) | 命中关键词: 存储<br/><b>问:</b> 董秘您好，近期Hugging Face推出的Microduck具身智能机器人热销，市场意识到端侧本地大模型推理、本地KV缓存存储需求快速增长，能否依托自研固件与缓存调度算法，解决端侧设备KV缓存占用过高、内存不足的痛点？港股募资计划加大端侧存储研发，未来在端侧AI赛道的中长期战略布局是怎样的，是否已经形成可规模化落地的完整解决方案？谢谢。<br/><b>答:</b> 尊敬的投资者，您好。公司保持对市场前沿技术应用的关注，公司自研SPU（存储处理单元）芯片与独有的iSA（存储智能体）相结合，可高效识别并下沉温冷数据，降低终端设备的DRAM容量需求，在成本优化及AI大模型本地化部署等方面具备优势。相关技术与产品尚在有序商业化的过程当中，对公司的业绩贡献亦需要过程，具体进展请以公司公开发布的信息为准。感谢您的关注。</description>
+</item>
+<item>
+<title>[深交所互动易][超图软件300036][存储] 贵公司空间智能底座是否支持有具身机器人3D数据采集能力吗？</title>
+<link>https://irm.cninfo.com.cn/ircs/question/questionDetail?questionId=2303990160562774016</link>
+<guid isPermaLink="false">szse_2303990160562774016</guid>
+<pubDate>Fri, 04 Sep 2026 16:04:13 +0800</pubDate>
+<description><b>深交所互动易</b> | 超图软件 (300036) | 命中关键词: 存储<br/><b>问:</b> 贵公司空间智能底座是否支持有具身机器人3D数据采集能力吗？<br/><b>答:</b> 投资者，您好：
+公司空间智能底座不直接提供相关能力。
+公司空间智能底座可接收机器人传感器产出的点云、影像等三维原始数据，提供三维数据导入、解析、清洗、分类、存储、空间配准、建模与空间分析能力；合作伙伴可基于底座 SDK 二次开发，完成机器人3D数据的后端处理、环境建图、空间认知、路径规划等功能</description>
+</item>
+<item>
+<title>[深交所互动易][德明利001309][存储] 董秘您好，近期公司股价大幅波动，融资盘踩踏严重，但公司仅发布了董事长不减持承诺，并未推出回购计划。请</title>
+<link>https://irm.cninfo.com.cn/ircs/question/questionDetail?questionId=2342355514311282688</link>
+<guid isPermaLink="false">szse_2342355514311282688</guid>
+<pubDate>Thu, 03 Sep 2026 23:10:18 +0800</pubDate>
+<description><b>深交所互动易</b> | 德明利 (001309) | 命中关键词: 存储<br/><b>问:</b> 董秘您好，近期公司股价大幅波动，融资盘踩踏严重，但公司仅发布了董事长不减持承诺，并未推出回购计划。请问管理层目前是否有具体的股份回购计划或新一轮股权激励安排，以向市场传递对公司未来发展的信心？如果没有，公司计划通过哪些具体的市值管理措施来维护中小股东利益？<br/><b>答:</b> 感谢您的关注！公司控股股东已作出十二个月内不减持承诺，公司持续聚焦存储主业，坚持研发投入，夯实核心竞争力。公司已披露2026年半年度利润分配预案，拟向全体股东每10股派发现金红利15元（含税），并以资本公积金每10股转增4股，积极回报投资者，相关信息请以公司法定披露媒体公告为准。</description>
+</item>
 <item>
 <title>[深交所互动易][东山精密002384][光模块] 董秘您好！在上市公司中报业绩交流会中，管理层讲800g光模块出货100多万支。请问2026上半年80</title>
 <link>https://irm.cninfo.com.cn/ircs/question/questionDetail?questionId=2353216559996784640</link>
