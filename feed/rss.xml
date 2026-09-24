@@ -3,7 +3,14 @@
 <title>A股互动问答关键词监控</title>
 <link>https://github.com/liuchao88/hudong-rss</link>
 <description>深交所互动易 + 上证e互动 董秘回答关键词监控（自动生成）</description>
-<lastBuildDate>Thu, 24 Sep 2026 21:48:33 +0800</lastBuildDate>
+<lastBuildDate>Fri, 25 Sep 2026 01:59:02 +0800</lastBuildDate>
+<item>
+<title>[上证e互动][至纯科技603690][存储] 至纯科技(603690) 你好，贵司旗下S300D 12寸单片式清洗设备，是否已经批量应用于国内先进</title>
+<link>https://sns.sseinfo.com/qaDetail.do?stockcode=603690&amp;id=1790999</link>
+<guid isPermaLink="false">sse_1790999</guid>
+<pubDate>Thu, 24 Sep 2026 17:56:00 +0800</pubDate>
+<description><b>上证e互动</b> | 至纯科技 (603690) | 命中关键词: 存储<br/><b>问:</b> 至纯科技(603690) 你好，贵司旗下S300D 12寸单片式清洗设备，是否已经批量应用于国内先进制程生产线， 目前该设备是否有助于高带宽HBM存储芯片等高端芯片国产化进程？ 2026年09月21日 09:56<br/><b>答:</b> 您好，公司半导体湿法设备可用于HBM芯片生产制造。公司半导体湿法设备聚焦晶圆制造的前道工艺，主要应用于扩散、光刻、刻蚀、离子注入、薄膜沉积等关键工序段前后，能够覆盖晶圆制造中包括逻辑电路、高密度存储、化合物半导体特色工艺等多个细分领域的市场需求，在 28 纳米节点设备开发已经全部完成，且全工艺机台均有订单，在更先进制程节点也已取得部分工艺订单。</description>
+</item>
 <item>
 <title>[深交所互动易][江波龙301308][存储] 董秘您好，除高通外，未来公司是否还在与其他主芯片厂商、大模型厂商推进类似的存算协同联合调优合作？ 比</title>
 <link>https://irm.cninfo.com.cn/ircs/question/questionDetail?questionId=2365662859394043904</link>
