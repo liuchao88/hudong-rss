@@ -46,6 +46,7 @@ CORPUS_CHARS = int(os.environ.get("CORPUS_CHARS", "16000"))
 DEEPSEEK_API_KEY = os.environ.get("DEEPSEEK_API_KEY", "").strip()
 DEEPSEEK_BASE_URL = os.environ.get("DEEPSEEK_BASE_URL", "https://api.deepseek.com/v1").strip().rstrip("/")
 DEEPSEEK_MODEL = os.environ.get("DEEPSEEK_MODEL", "deepseek-flash").strip()
+WECOM_WEBHOOK_URL = os.environ.get("WECOM_WEBHOOK_URL", "").strip()   # 可选：填了就把周报推到企微群
 
 # 这些词太泛，塞进词库只会让 RSS 刷屏，模型提了也不收
 TOO_GENERIC = {"发展", "业绩", "客户", "公司", "产品", "技术", "行业", "市场", "投资", "增长",
@@ -267,6 +268,41 @@ def heat_from_state(keep=3, top=30):
     return blocks, summary
 
 
+# ---------- 企微推送（可选） ----------
+def weekly_md(added, directions, note, heat_weeks):
+    """拼周报正文（企微 markdown：没有表格，只能用标题/加粗/列表/链接）"""
+    today = datetime.now(TZ).strftime("%Y-%m-%d")
+    lines = ["### 🧭 AI 词库周报（%s）" % today,
+             "> 新增 %d 词 ｜ 方向 %d 条 ｜ 热度数据 %d 周" % (len(added), len(directions), len(heat_weeks))]
+    if note:
+        lines += ["", "**一句话**：%s" % note]
+    if directions:
+        lines += ["", "**本周在变热的方向**"]
+        for i, d in enumerate(directions, 1):
+            lines.append("%d. %s（%s）：%s" % (i, d.get("direction", ""), d.get("trend", "?"),
+                                              str(d.get("evidence", ""))[:40]))
+    if added:
+        lines += ["", "**新收进词库**", "、".join(added[:18]) + ("…" if len(added) > 18 else "")]
+    lines += ["", "> [词库文件](https://github.com/liuchao88/hudong-rss/blob/main/AI_KEYWORDS.json)"]
+    return "\n".join(lines)
+
+
+def wecom_push(text):
+    """把周报推到企微群。没配 WECOM_WEBHOOK_URL 就跳过；推失败也只记日志，不影响词库更新。"""
+    if not WECOM_WEBHOOK_URL:
+        log("未配置 WECOM_WEBHOOK_URL，跳过推送")
+        return
+    payload = {"msgtype": "markdown", "markdown": {"content": text}}
+    try:
+        req = urllib.request.Request(WECOM_WEBHOOK_URL, data=json.dumps(payload).encode("utf-8"),
+                                     headers={"Content-Type": "application/json"})
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            body = resp.read().decode("utf-8", errors="replace")
+        log(f"企微推送：{body[:120]}")
+    except Exception as e:
+        log(f"企微推送失败（不影响词库更新）：{type(e).__name__}: {e}")
+
+
 # ---------- 主流程 ----------
 def main():
     dry_run = "--dry-run" in sys.argv
@@ -403,6 +439,10 @@ def main():
         json.dump(data, f, ensure_ascii=False, indent=2)
         f.write("\n")
     log(f"已写入 {DICT_PATH}：新增词 {len(added)} 个、本周方向 {len(directions)} 条、热度 {len(heat_summary)} 周")
+    if added or directions or note:
+        wecom_push(weekly_md(added, directions, note, heat_summary))
+    else:
+        log("这周没有可报的内容，不推送")
     return 0
 
 
