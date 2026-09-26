@@ -349,6 +349,10 @@ def main():
     state = load_state()
     seen = set(state.get("seen", []))
     seen |= load_existing_guids()
+    # 本周各关键词命中数：每周任务靠它判断"哪个方向在变热"（只看命中数会错，但配新闻语料就够用）
+    # 按 ISO 周分桶，只保留最近 12 周
+    kw_hits = state.setdefault("kw_hits", {})
+    week = datetime.now(TZ).strftime("%G-W%V")
 
     new_items = []
     for platform, fetcher in [("深交所互动易", fetch_szse), ("上证e互动", fetch_sse)]:
@@ -360,14 +364,20 @@ def main():
             hit = matcher(text)
             if hit:
                 it["kws"] = top_keywords(hit, weights)
+                bucket = kw_hits.setdefault(week, {})
+                for kw in hit:                      # 记全部命中词，不只标题里挂的那 4 个
+                    bucket[kw] = bucket.get(kw, 0) + 1
                 new_items.append(it)
                 seen.add(it["guid"])
 
     new_items.sort(key=lambda x: x["ts"] or time.time(), reverse=True)
     log(f"新增命中 {len(new_items)} 条")
 
-    # 保留 state 中最近 2000 个 id（防膨胀）
+    # 保留 state 中最近 2000 个 id（防膨胀）；kw_hits 只留最近 12 周
     state["seen"] = list(seen)[-2000:]
+    for wk in sorted(kw_hits)[:-12]:
+        kw_hits.pop(wk, None)
+    state["kw_hits"] = kw_hits
     with open(STATE_PATH, "w", encoding="utf-8") as f:
         json.dump(state, f, ensure_ascii=False)
 
