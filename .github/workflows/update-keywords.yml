@@ -30,6 +30,7 @@ jobs:
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           DEEPSEEK_MODEL: deepseek-flash
+          WECOM_WEBHOOK_URL: ${{ secrets.WECOM_WEBHOOK_URL }}   # 可选：配了就把周报推到企微群；不配就只写文件
         run: python scripts/update_keywords.py
 
       - name: 提交词库更新
@@ -38,4 +39,5 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add AI_KEYWORDS.json
           git diff --cached --quiet || git commit -m "AI keywords auto-update $(date -u +%Y-%m-%d)"
+          git pull --rebase --autostash || true     # 抓取任务每 10 分钟也在提交，先对齐再推
           git push
