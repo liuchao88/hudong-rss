@@ -22,6 +22,7 @@ FEED_DIR = os.path.join(BASE_DIR, "feed")
 RSS_PATH = os.path.join(FEED_DIR, "rss.xml")
 STATE_PATH = os.path.join(BASE_DIR, "state.json")
 KEYWORDS_PATH = os.path.join(BASE_DIR, "keywords.txt")
+KEYWORDS_JSON_PATH = os.path.join(BASE_DIR, "AI_KEYWORDS.json")   # 分类词库（有它就用它，没有退回 keywords.txt）
 MAX_ITEMS = 300          # RSS 最多保留条数
 MAX_PAGES = 2            # 每个平台翻几页
 PAGE_SIZE = 50           # 每页条数
@@ -184,7 +185,58 @@ def fetch_sse():
 
 
 # ---------- 关键词 ----------
+# 两套词库都能用：AI_KEYWORDS.json（分类词库，主力）> keywords.txt（老的单行词表，兜底）
+# 词库里同时有"AI"这种 2 字符缩写和"光模块"这种中文词，匹配方式要分开：
+#   中文词 → 子串匹配（中文没有词边界）
+#   纯 ASCII 词 → 按词边界匹配，否则 PD 会命中 update、IB 会命中 subscribe
+RANK = {"critical": 0, "high": 1, "medium": 2, "low": 3}
+_ASCII_RE = re.compile(r"[A-Za-z0-9][A-Za-z0-9 .+\-/]*$")
+
+
+def _flatten_dict(data):
+    """把 AI_KEYWORDS.json 里的 categories/subcategories 摊平成词表 + 权重表"""
+    kws, weights = [], {}
+
+    def walk(node):
+        for k in node.get("keywords") or []:
+            k = (k or "").strip()
+            if k:
+                kws.append(k)
+        for sub in node.get("subcategories") or []:
+            walk(sub)
+
+    def walk_entities(node):
+        for k in node.get("entities") or []:
+            k = (k or "").strip()
+            if k:
+                kws.append(k)
+        for sub in node.get("subcategories") or []:
+            walk_entities(sub)
+
+    for c in data.get("categories") or []:
+        walk(c)
+        walk_entities(c)
+    for lvl, lst in (data.get("signal_weights") or {}).items():
+        for k in lst or []:
+            k = (k or "").strip()
+            if k:
+                weights[k] = lvl
+    return kws, weights
+
+
 def load_keywords():
+    """返回 (词表, 权重表)。优先 AI_KEYWORDS.json；没有就退回 keywords.txt。"""
+    if os.path.exists(KEYWORDS_JSON_PATH):
+        try:
+            with open(KEYWORDS_JSON_PATH, encoding="utf-8") as f:
+                kws, weights = _flatten_dict(json.load(f))
+            kws = list(dict.fromkeys(kws))
+            if kws:
+                log(f"词库：AI_KEYWORDS.json，共 {len(kws)} 个词（事件信号词 {len(weights)} 个）")
+                return kws, weights
+            log("AI_KEYWORDS.json 里没读到关键词，退回 keywords.txt")
+        except Exception as e:
+            log(f"AI_KEYWORDS.json 读取失败({e})，退回 keywords.txt")
     kws = []
     try:
         with open(KEYWORDS_PATH, encoding="utf-8") as f:
@@ -197,10 +249,37 @@ def load_keywords():
         with open(KEYWORDS_PATH, "w", encoding="utf-8") as f:
             f.write("# 每行一个关键词，修改后下次运行自动生效\n光模块\n存储\n人形机器人\n")
         kws = ["光模块", "存储", "人形机器人"]
-    return kws
+    log(f"词库：keywords.txt，共 {len(kws)} 个词")
+    return kws, {}
+
+
+def build_matcher(kws):
+    """返回 match(text) -> 命中的词列表"""
+    plain, regexes = [], []
+    for k in kws:
+        if _ASCII_RE.match(k) and len(k) <= 30:
+            regexes.append((k, re.compile(r"(?<![A-Za-z0-9])" + re.escape(k) + r"(?![A-Za-z0-9])", re.I)))
+        else:
+            plain.append(k)
+
+    def match(text):
+        low = text.lower()
+        got = [k for k in plain if k.lower() in low]
+        got += [k for k, rgx in regexes if rgx.search(text)]
+        return got
+
+    return match
+
+
+def top_keywords(hits, weights, limit=4):
+    """按权重排序、去重、只留前 limit 个（标题里挂一串反而看不清）"""
+    uniq = list(dict.fromkeys(hits))
+    uniq.sort(key=lambda k: RANK.get(weights.get(k), 9))
+    return uniq[:limit]
 
 
 def match_keywords(text, kws):
+    """老接口，留着兼容（新代码用 build_matcher）"""
     low = text.lower()
     return [kw for kw in kws if kw.lower() in low]
 
@@ -265,8 +344,8 @@ def build_rss(items):
 
 # ---------- 主流程 ----------
 def main():
-    kws = load_keywords()
-    log(f"关键词: {kws}")
+    kws, weights = load_keywords()
+    matcher = build_matcher(kws)
     state = load_state()
     seen = set(state.get("seen", []))
     seen |= load_existing_guids()
@@ -278,9 +357,9 @@ def main():
             if it["guid"] in seen:
                 continue
             text = it["question"] + "\n" + it["answer"] + "\n" + it["company"]
-            hit = match_keywords(text, kws)
+            hit = matcher(text)
             if hit:
-                it["kws"] = hit
+                it["kws"] = top_keywords(hit, weights)
                 new_items.append(it)
                 seen.add(it["guid"])
 
