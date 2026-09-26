@@ -2,6 +2,911 @@
 # 每行一个关键词，修改保存后，下次定时任务（10分钟内）自动生效
 # 以 # 开头的行是注释，不会生效
 # 匹配规则：问题或回答或公司名里包含该词即命中（不区分大小写）
+
+# 上游原材料
+半导体材料
+硅片
+晶圆
+300mm晶圆
+12英寸晶圆
+8英寸晶圆
+SOI
+SiC
+GaN
+化合物半导体
+第三代半导体
+第四代半导体
+外延片
+衬底
+靶材
+溅射靶材
+电子特气
+高纯气体
+特种气体
+光刻胶
+KrF
+ArF
+EUV
+光刻胶配套材料
+湿电子化学品
+CMP材料
+CMP抛光液
+CMP抛光垫
+封装材料
+塑封料
+引线框架
+键合丝
+锡球
+底填料
+电子级玻纤
+ABF载板
+IC载板
+BT载板
+陶瓷基板
+
+# AI芯片材料
+先进封装
+2.5D封装
+3D封装
+Chiplet
+CoWoS
+CoWoS-L
+CoWoS-S
+SoIC
+InFO
+FO-WLP
+FOPLP
+混合键合
+Hybrid Bonding
+TSV
+硅中介层
+Interposer
+RDL
+封装基板
+先进封装材料
+热界面材料
+TIM
+散热材料
+
+# 光通信材料
+磷化铟
+InP
+砷化镓
+GaAs
+硅光
+Silicon Photonics
+薄膜铌酸锂
+TFLN
+铌酸锂
+LiNbO3
+光纤预制棒
+石英
+光纤
+特种光纤
+光纤涂覆材料
+光学晶体
+光学玻璃
+
+# AI芯片
+AI芯片
+AI半导体
+AI加速器
+AI Accelerator
+人工智能芯片
+算力芯片
+计算芯片
+智能芯片
+异构计算
+异构算力
+
+# GPU
+GPU
+AI GPU
+数据中心GPU
+训练GPU
+推理GPU
+GPU集群
+GPU服务器
+GPU算力
+GPU供应
+GPU采购
+GPU订单
+GPU出口
+GPU限制
+GPU禁令
+GPU管制
+
+# ASIC
+ASIC
+AI ASIC
+定制ASIC
+AI加速器
+专用AI芯片
+云厂商ASIC
+自研芯片
+定制芯片
+Custom Silicon
+XPU
+
+# CPU
+CPU
+数据中心CPU
+服务器CPU
+AI CPU
+Arm CPU
+x86
+RISC-V
+Chiplet CPU
+AI PC
+AI服务器CPU
+
+# NPU
+NPU
+Neural Processing Unit
+端侧AI芯片
+边缘AI芯片
+AI PC芯片
+手机AI芯片
+SoC
+AI SoC
+
+# 国产替代
+国产GPU
+国产AI芯片
+国产算力
+国产替代
+自主可控
+国产服务器
+国产CPU
+国产ASIC
+国产NPU
+国产EDA
+国产半导体
+
+# HBM
+HBM
+HBM2
+HBM2E
+HBM3
+HBM3E
+HBM4
+HBM4E
+High Bandwidth Memory
+高带宽内存
+高带宽存储
+HBM产能
+HBM供应
+HBM涨价
+HBM订单
+HBM扩产
+HBM良率
+HBM堆叠
+
+# DRAM
+DRAM
+DDR4
+DDR5
+DDR6
+LPDDR
+GDDR
+GDDR6
+GDDR7
+服务器内存
+AI内存
+
+# NAND
+NAND
+3D NAND
+QLC
+TLC
+SSD
+企业级SSD
+数据中心SSD
+AI SSD
+AI存储
+
+# 新型存储
+CXL
+CXL Memory
+Memory Pooling
+内存池
+内存扩展
+Persistent Memory
+计算存储
+存算一体
+Near Memory Computing
+
+# 光通信
 光模块
-存储
+AI光模块
+数据中心光模块
+高速光模块
+800G
+800G光模块
+1.6T
+1.6T光模块
+3.2T
+400G
+800G
+1600G
+200G
+400G
+800G
+1.6T
+
+光芯片
+激光芯片
+光电芯片
+光电转换
+光探测器
+PD
+APD
+PIN
+TIA
+Driver
+DSP
+CDR
+EML
+CW Laser
+CW光源
+DFB
+VCSEL
+F-P
+FP激光器
+
+CPO
+Co-Packaged Optics
+共封装光学
+硅光
+硅光子
+Silicon Photonics
+光电共封装
+光引擎
+Optical Engine
+OBO
+On-Board Optics
+NPO
+Near Package Optics
+LPO
+Linear Pluggable Optics
+LRO
+Linear-drive
+
+光纤
+单模光纤
+多模光纤
+G.652
+G.654
+G.655
+G.657
+特种光纤
+空芯光纤
+Hollow Core Fiber
+光纤连接器
+MPO
+MTP
+AOC
+DAC
+AEC
+
+# 交换机/网络
+AI交换机
+数据中心交换机
+高速交换机
+400G交换机
+800G交换机
+1.6T交换机
+以太网交换机
+Ethernet
+InfiniBand
+IB
+RoCE
+
+交换芯片
+Switch ASIC
+网络芯片
+NIC
+SmartNIC
+DPU
+IPU
+网络处理器
+AI NIC
+
+NVLink
+NVSwitch
+PCIe
+PCIe 5.0
+PCIe 6.0
+PCIe 7.0
+CXL
+UALink
+Ultra Ethernet
+UEC
+Ethernet AI
+Scale-up
+Scale-out
+
+# AI服务器
+AI服务器
+GPU服务器
+AI计算服务器
+AI训练服务器
+AI推理服务器
+液冷服务器
+机架服务器
+刀片服务器
+高密度服务器
+AI机柜
+AI Rack
+服务器机柜
+服务器ODM
+服务器OEM
+整机柜
+机架级系统
+Rack-scale
+AI集群
+GPU集群
+算力集群
+超级计算机
+HPC
+
+PCB
+高速PCB
+HDI
+CCL
+高速CCL
+服务器主板
+电源模块
+VRM
+BMC
+CPU
+GPU
+内存
+SSD
+NIC
+DPU
+连接器
+高速连接器
+背板
+线缆
+DAC
+AOC
+
+# 数据中心
+数据中心
+AI数据中心
+AI Data Center
+IDC
+超大规模数据中心
+Hyperscale
+云数据中心
+智算中心
+智能计算中心
+算力中心
+算力基础设施
+算力网络
+算力租赁
+GPU云
+AI云
+
+数据中心建设
+数据中心扩容
+数据中心投资
+数据中心资本开支
+CapEx
+机房
+机柜
+机架
+PUE
+WUE
+DCIM
+模块化数据中心
+预制化数据中心
+液冷数据中心
+
+CSP
+Hyperscaler
+Cloud Provider
+云厂商
+IDC运营商
+第三方数据中心
+数据中心运营
+GPU Cloud
+AI Cloud
+
+# 电力电源
+AI电源
+服务器电源
+数据中心电源
+UPS
+BBU
+PSU
+CRPS
+电源模块
+电源管理
+PMIC
+VRM
+DC-DC
+AC-DC
+48V
+54V
+800V
+高压直流
+HVDC
+直流供电
+
+数据中心用电
+AI用电
+电力需求
+电力缺口
+电网扩容
+输配电
+变压器
+配电设备
+开关设备
+断路器
+储能
+UPS储能
+电池储能
+备用电源
+柴油发电机
+燃气轮机
+核电
+光伏
+风电
+天然气发电
+
+# 散热液冷
+液冷
+Liquid Cooling
+冷板液冷
+Cold Plate
+浸没式液冷
+Immersion Cooling
+单相浸没
+两相浸没
+喷淋式液冷
+CDU
+Cooling Distribution Unit
+冷却液
+冷却剂
+冷却塔
+水冷
+风冷
+热管
+均热板
+Vapor Chamber
+散热器
+散热片
+风扇
+风冷系统
+液冷服务器
+液冷机柜
+液冷数据中心
+热管理
+Thermal Management
+TIM
+导热材料
+导热硅脂
+导热垫
+
+# 云厂商
+Microsoft
+Azure
+Amazon
+AWS
+Google
+Google Cloud
+Meta
+Oracle
+OCI
+CoreWeave
+Alibaba Cloud
+Tencent Cloud
+Huawei Cloud
+
+阿里云
+腾讯云
+华为云
+百度智能云
+字节跳动
+火山引擎
+京东云
+移动云
+联通云
+电信云
+
+AI Cloud
+AI云
+云算力
+GPU云
+AI训练云
+AI推理云
+模型服务
+MaaS
+Model as a Service
+IaaS
+PaaS
+AI基础设施
+云计算资本开支
+CapEx
+云厂商CapEx
+数据中心投资
+GPU采购
+GPU订单
+算力采购
+
+# 大模型
+大模型
+基础模型
+Foundation Model
+LLM
+Large Language Model
+语言模型
+多模态模型
+Multimodal
+视觉语言模型
+VLM
+视觉大模型
+语音大模型
+Audio Model
+视频大模型
+Video Model
+世界模型
+World Model
+
+Transformer
+MoE
+Mixture of Experts
+Dense Model
+稀疏模型
+Reasoning Model
+推理模型
+Thinking Model
+Test-time Compute
+Scaling Law
+长上下文
+Long Context
+Context Window
+RAG
+Retrieval Augmented Generation
+微调
+Fine-tuning
+SFT
+RLHF
+DPO
+GRPO
+强化学习
+蒸馏
+Knowledge Distillation
+量化
+Quantization
+剪枝
+Pruning
+模型压缩
+
+# Agent、AIcoding
+AI Agent
+AI代理
+智能体
+Agentic AI
+Agentic
+AI员工
+数字员工
+Digital Employee
+AI Workforce
+AI Copilot
+Copilot
+Autonomous Agent
+Autonomous AI
+Multi-Agent
+多智能体
+Agentic Workflow
+Agent Workflow
+Workflow Automation
+AI Automation
+Computer Use
+Computer Agent
+Browser Agent
+Research Agent
+Coding Agent
+AI Coding
+AI程序员
+AI开发
+AI软件工程
+AI Engineer
+AI Developer
+AI IDE
+AI编程助手
+代码生成
+Code Generation
+Code Agent
+Software Agent
+
+# AI软件和应用
+AI SaaS
+AI Software
+AI软件
+企业AI
+Enterprise AI
+AI CRM
+AI ERP
+AI办公
+AI协同
+AI客服
+AI销售
+AI营销
+AI财务
+AI法务
+AI人力资源
+AI HR
+AI供应链
+AI采购
+AI制造
+AI质检
+AI研发
+AI设计
+AI编程
+AI安全
+
+AI Search
+AI搜索
+Generative Search
+生成式搜索
+Answer Engine
+答案引擎
+AI浏览器
+AI Browser
+Agent Browser
+
+AIGC
+Generative AI
+生成式AI
+AI绘画
+AI图像
+AI视频
+AI音乐
+AI语音
+AI配音
+AI数字人
+AI Avatar
+数字人
+Text-to-Image
+Text-to-Video
+Image-to-Video
+Text-to-Speech
+Speech-to-Text
+TTS
+STT
+
+# 机器人和物理AI
+Physical AI
+具身智能
+Embodied AI
+机器人
 人形机器人
+Humanoid Robot
+工业机器人
+协作机器人
+Cobot
+服务机器人
+物流机器人
+AMR
+AGV
+机器人视觉
+机器视觉
+机器人控制器
+伺服
+减速器
+灵巧手
+执行器
+关节模组
+力矩传感器
+视觉传感器
+激光雷达
+机器人操作系统
+Robot OS
+VLA
+Vision Language Action
+世界模型
+World Model
+机器人数据
+机器人训练
+
+# AI行业应用
+AI金融
+金融AI
+AI投研
+AI交易
+AI量化
+AI风控
+AI客服
+AI投顾
+金融大模型
+金融Agent
+
+AI医疗
+医疗大模型
+AI制药
+AI药物研发
+AI诊断
+AI影像
+AI手术
+数字医疗
+生物计算
+蛋白质结构预测
+
+AI汽车
+智能驾驶
+自动驾驶
+ADAS
+L2
+L3
+L4
+L5
+Robotaxi
+无人驾驶
+智能座舱
+端到端自动驾驶
+E2E
+VLA
+车载AI
+AI芯片
+
+工业AI
+工业大模型
+智能制造
+工业视觉
+AI质检
+预测性维护
+数字孪生
+工业Agent
+
+AI电商
+AI推荐
+智能客服
+AI营销
+AI广告
+AI导购
+AI搜索
+
+AI游戏
+AIGC游戏
+AI NPC
+AI角色
+AI剧情
+AI游戏开发
+
+# AI事件
+AI订单
+AI大单
+AI采购
+GPU订单
+光模块订单
+服务器订单
+数据中心订单
+长期订单
+大额订单
+框架协议
+战略合作
+供应协议
+采购协议
+
+扩产
+扩产计划
+产能扩张
+新建产线
+新建工厂
+资本开支
+CapEx
+产能释放
+产能爬坡
+良率提升
+
+涨价
+提价
+价格上涨
+供不应求
+供应紧张
+产能紧张
+库存下降
+缺货
+短缺
+
+量产
+首发
+全球首发
+国内首发
+技术突破
+性能提升
+功耗降低
+良率提升
+国产替代
+打破垄断
+商业化
+规模化
+
+大客户
+核心客户
+新增客户
+客户验证
+客户导入
+送样
+认证
+量产
+定点
+供应商
+核心供应商
+Tier 1
+Tier 2
+
+CapEx
+资本开支
+AI CapEx
+数据中心CapEx
+云厂商CapEx
+GPU CapEx
+AI基础设施投资
+数据中心投资
+AI投资计划
+
+# 政策
+AI政策
+人工智能政策
+人工智能规划
+AI产业政策
+算力政策
+算力基础设施
+智算中心
+国产替代
+自主可控
+科技自立自强
+芯片禁令
+GPU禁令
+AI芯片出口管制
+半导体出口管制
+技术封锁
+实体清单
+制裁
+进口限制
+出口限制
+关税
+AI监管
+AI法案
+AI安全
+数据安全
+数据跨境
+算法监管
+
+# 市场关键词
+AI概念
+AI产业链
+AI受益
+AI映射
+AI订单
+AI业绩
+AI收入
+AI利润
+AI增量
+AI渗透率
+AI需求
+AI景气
+AI涨价
+AI扩产
+AI国产替代
+AI供应链
+AI核心供应商
+AI客户
+AI定点
+AI验证
+AI量产
+AI商业化
+AI变现
+AI货币化
+AI资本开支
+AI投资
+AI并购
+AI重组
+AI合作
+AI战略合作
+AI生态
