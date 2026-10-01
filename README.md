@@ -31,7 +31,8 @@
 ## 三、词库：不在这里，在独立仓库
 
 词库已抽到 **[liuchao88/a-share-keywords](https://github.com/liuchao88/a-share-keywords)**（唯一真源，每周一自动补词）。
-本仓库运行时读它的 `keywords/index.json` → 逐个取 `enabled: true` 的行业文件 → 合并词表与权重。
+本仓库运行时读它的 `keywords/index.json`（`industries` 清单）→ 逐个取 `enabled: true` 的行业文件 → 合并词表与权重。
+**开关（enabled）集中在 index.json 里改**，行业文件本身只有词汇。
 
 - 取不到就**这一轮不抓**（返回 None 直接退出）：宁可空一轮，也不用过期词库硬筛 —— 那是"隐性漏"（新词命中的问答会被静默丢掉），下一轮自动补上
 - 原来的本地词库与 `keywords.txt` 已删除；周任务 `update-keywords.yml` 也已搬去那个仓库
