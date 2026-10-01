@@ -21,8 +21,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FEED_DIR = os.path.join(BASE_DIR, "feed")
 RSS_PATH = os.path.join(FEED_DIR, "rss.xml")
 STATE_PATH = os.path.join(BASE_DIR, "state.json")
-KEYWORDS_PATH = os.path.join(BASE_DIR, "keywords.txt")
-KEYWORDS_JSON_PATH = os.path.join(BASE_DIR, "AI_KEYWORDS.json")   # 分类词库（有它就用它，没有退回 keywords.txt）
+KEYWORDS_PATH = os.path.join(BASE_DIR, "keywords.txt")       # 已废弃（词库搬到 a-share-keywords 仓库）
+KEYWORDS_JSON_PATH = os.path.join(BASE_DIR, "AI_KEYWORDS.json")  # 已废弃（同上）
+# 词库唯一真源：a-share-keywords 仓库（每周一自动补词，按行业分文件 + 各自 enabled 开关）
+KW_INDEX = ["https://gcore.jsdelivr.net/gh/liuchao88/a-share-keywords@main/keywords/index.json",
+            "https://raw.githubusercontent.com/liuchao88/a-share-keywords/main/keywords/index.json"]
+KW_BASE = ["https://gcore.jsdelivr.net/gh/liuchao88/a-share-keywords@main/keywords/",
+           "https://raw.githubusercontent.com/liuchao88/a-share-keywords/main/keywords/"]
 MAX_ITEMS = 300          # RSS 最多保留条数
 MAX_PAGES = 2            # 每个平台翻几页
 PAGE_SIZE = 50           # 每页条数
@@ -225,32 +230,46 @@ def _flatten_dict(data):
 
 
 def load_keywords():
-    """返回 (词表, 权重表)。优先 AI_KEYWORDS.json；没有就退回 keywords.txt。"""
-    if os.path.exists(KEYWORDS_JSON_PATH):
+    """词库唯一真源：a-share-keywords 仓库（每周一自动补词，按行业分文件、每个文件带 enabled 开关）。
+       取 index.json → 逐个取 enabled=true 的行业文件 → 合并成 (词表, 权重表)。
+       取不到就返回 (None, None)：本轮跳过不抓（宁可这轮空着，也不用过期词库硬筛 —— 那是隐性漏）。
+       注意：如果所有行业都 enabled=false（等于你手动关掉了全部词库），也按"跳过"处理。"""
+    idx = None
+    for u in KW_INDEX:
         try:
-            with open(KEYWORDS_JSON_PATH, encoding="utf-8") as f:
-                kws, weights = _flatten_dict(json.load(f))
-            kws = list(dict.fromkeys(kws))
-            if kws:
-                log(f"词库：AI_KEYWORDS.json，共 {len(kws)} 个词（事件信号词 {len(weights)} 个）")
-                return kws, weights
-            log("AI_KEYWORDS.json 里没读到关键词，退回 keywords.txt")
+            idx = json.loads(http_get(u))
+            break
         except Exception as e:
-            log(f"AI_KEYWORDS.json 读取失败({e})，退回 keywords.txt")
-    kws = []
-    try:
-        with open(KEYWORDS_PATH, encoding="utf-8") as f:
-            for line in f:
-                kw = line.strip()
-                if kw and not kw.startswith("#"):
-                    kws.append(kw)
-    except FileNotFoundError:
-        log("keywords.txt 不存在，创建默认关键词")
-        with open(KEYWORDS_PATH, "w", encoding="utf-8") as f:
-            f.write("# 每行一个关键词，修改后下次运行自动生效\n光模块\n存储\n人形机器人\n")
-        kws = ["光模块", "存储", "人形机器人"]
-    log(f"词库：keywords.txt，共 {len(kws)} 个词")
-    return kws, {}
+            log(f"index.json 取失败（{u.split('/')[2]}）：{type(e).__name__}")
+    if not idx:
+        log("index.json 取不到 → 本轮跳过")
+        return None, None
+    kws, weights, files, off = [], {}, [], []
+    for name in idx.get("files") or []:
+        D = None
+        for base in KW_BASE:
+            try:
+                D = json.loads(http_get(base + name))
+                break
+            except Exception:
+                continue
+        if not D:
+            log(f"  ✗ {name} 取不到，跳过")
+            continue
+        if not D.get("enabled", True):
+            off.append(name)
+            continue
+        k, w = _flatten_dict(D)
+        kws += k
+        weights.update(w)
+        files.append(name)
+    kws = list(dict.fromkeys(kws))
+    if not kws:
+        log("没有任何生效的行业词库 → 本轮跳过")
+        return None, None
+    log("词库：a-share-keywords（生效 %s%s）共 %d 个词（事件信号词 %d 个）" % (
+        "、".join(files), ("；跳过 enabled=false 的 " + "、".join(off)) if off else "", len(kws), len(weights)))
+    return kws, weights
 
 
 def build_matcher(kws):
@@ -345,6 +364,9 @@ def build_rss(items):
 # ---------- 主流程 ----------
 def main():
     kws, weights = load_keywords()
+    if kws is None:
+        log("词库不可用 → 本轮不抓（下一轮自动补）")
+        return 0
     matcher = build_matcher(kws)
     state = load_state()
     seen = set(state.get("seen", []))

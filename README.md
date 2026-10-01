@@ -28,41 +28,37 @@
 每个平台翻 2 页 × 50 条（`MAX_PAGES` / `PAGE_SIZE`），配合 `state.json` 里的 `seen` 做 id 去重。
 只抓增量、不回溯历史（全市场历史问答约 8.5 万条，回溯无意义）。
 
-## 三、词库：两个文件，谁是主角
+## 三、词库：不在这里，在独立仓库
 
-| 文件 | 地位 | 现状 |
-|---|---|---|
-| `AI_KEYWORDS.json` | **主力**，有它就用它 | 18 个分类（含 subcategories）、**767 个词**；`signal_weights` 分四档：critical 13 / high 8 / medium 7 / low 4 |
-| `keywords.txt` | 兜底，JSON 不存在时才用 | 3 个词（光模块 / 存储 / 人形机器人） |
+词库已抽到 **[liuchao88/a-share-keywords](https://github.com/liuchao88/a-share-keywords)**（唯一真源，每周一自动补词）。
+本仓库运行时读它的 `keywords/index.json` → 逐个取 `enabled: true` 的行业文件 → 合并词表与权重。
+
+- 取不到就**这一轮不抓**（返回 None 直接退出）：宁可空一轮，也不用过期词库硬筛 —— 那是"隐性漏"（新词命中的问答会被静默丢掉），下一轮自动补上
+- 原来的本地词库与 `keywords.txt` 已删除；周任务 `update-keywords.yml` 也已搬去那个仓库
+- **加/删词、开关行业，都去 a-share-keywords 仓库改**，本仓库不再存词库副本
 
 匹配规则（`scripts/fetch_qna.py`）：
 - 中文词走子串匹配（中文没有词边界）；纯 ASCII 词走词边界（否则 `PD` 会命中 `update`、`IB` 会命中 `subscribe`）
 - 命中词按 `signal_weights` 权重排序，**标题里最多挂 4 个**（`top_keywords(limit=4)`，挂一串反而看不清）
 
-## 四、两个定时任务
+## 四、定时任务
 
-### 1) `qna-watch.yml` —— 抓取与发布
+### `qna-watch.yml` —— 抓取与发布
 名义每 10 分钟（`cron: */10 * * * *`）：抓取 → 词库过滤 → 写 `feed/rss.xml` + `state.json` → 提交 → 通知 jsdelivr 刷新缓存 → 部署 Pages。
 单 job 结构（历史上双 job 会发布到旧 HEAD，已修）。
 
-### 2) `update-keywords.yml` —— 每周自动补词
-每周一 10:00（北京）让大模型从语料里给词库补新词，产出写回 `AI_KEYWORDS.json` 的 `changelog` / `heat` / `weekly_note`，并把周报推到企业微信群。
-
-- 语料 = 本周词库已命中的问答原文 + 华尔街见闻早餐「要闻」段 + 虎嗅 RSS 标题
-  （加新闻源的原因：董秘问答是企业被动回复、比行情慢半拍，新主题通常先在新闻里冒头）
-- **四道闸门**：只加不删；分类必须已存在；新词必须原样出现在本次语料里（防编造）；每次 ≤20 个、词库总量 ≤1200
-- 任何失败（没配 key、抓取失败、模型超时）→ 不动文件、退出码 0，不影响仓库其它流程
-- Secrets：`DEEPSEEK_API_KEY`（必填）、`WECOM_WEBHOOK_URL`（可选，配了才推周报）
+### 每周补词：见 a-share-keywords 的 `update-keywords.yml`
+每周一 10:00（北京）从"命中的互动问答 + 财经新闻要闻"里给词库补新词，只加不删，
+结果写进行业文件的 `changelog` / `heat` / `weekly_note`，并把周报推到企微群。
+本仓库的 `state.json` 里的 `kw_hits`（按 ISO 周的命中统计）是那个任务的输入之一。
 
 ## 五、文件清单
 
 | 文件 | 作用 |
 |---|---|
-| `scripts/fetch_qna.py` | 抓两个平台 → 词库过滤 → 写 RSS + 状态 |
-| `scripts/update_keywords.py` | 每周补词（含本地校验与企微周报） |
+| `scripts/fetch_qna.py` | 抓两个平台 → 拉远程词库过滤 → 写 RSS + 状态 |
 | `feed/rss.xml` | 产物，被 Pages 发布、被 FreshRSS 订阅 |
-| `state.json` | 已推过的条目 id（`seen`）+ 按 ISO 周累计的命中统计（`kw_hits`，周任务读它算"什么在变热"） |
-| `AI_KEYWORDS.json` / `keywords.txt` | 词库（见上） |
+| `state.json` | 已推过的条目 id（`seen`）+ 按 ISO 周累计的命中统计（`kw_hits`，补词任务读它算"什么在变热"） |
 
 ## 六、谁在消费这份 feed
 
@@ -80,7 +76,7 @@
 
 ## 八、常用操作
 
-- **加/删关键词**：直接编辑 `AI_KEYWORDS.json`（周任务也会自动追加）；想退回纯手写词表，删掉这个 JSON 即可自动用 `keywords.txt`
+- **加/删关键词**：去 [a-share-keywords](https://github.com/liuchao88/a-share-keywords) 改（那个仓库的周任务还会自动补充新词）；本仓库不再存词库
 - **立刻跑一次抓取**：Actions → `qna-watch` → Run workflow
 - **看历史**：`feed/rss.xml`，或在 FreshRSS / Folo 里看
 
