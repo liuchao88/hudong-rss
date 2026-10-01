@@ -1,8 +1,9 @@
 name: qna-watch
 
 on:
-  schedule:
-    - cron: '*/10 * * * *'
+  # 定时已交给「阿里云 FC 时钟」：由它准点调 workflow_dispatch 叫醒本工作流
+  # （GitHub 自带 schedule 是 best-effort：实测 */10 一天只跑 5~6 次，还会落到半夜 → 已移除）
+  # 想手动跑：Actions → qna-watch → Run workflow
   workflow_dispatch:
 
 permissions:
