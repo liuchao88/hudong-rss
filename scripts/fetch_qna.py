@@ -87,7 +87,7 @@ def fetch_szse():
                 "question": q,
                 "answer": a,
                 "ts": int(ts_ms) / 1000 if ts_ms else 0,
-                "link": f"https://irm.cninfo.com.cn/ircs/question/questionDetail?questionId={r.get('indexId', '')}",
+                "link": f"https://irm.cninfo.com.cn/newircs/question/questionDetail?questionId={r.get('indexId', '')}",
             })
         time.sleep(0.5)
     return items
@@ -165,7 +165,7 @@ def parse_sse_html(raw_html):
             "question": q_part,
             "answer": a_part,
             "ts": ts,
-            "link": f"https://sns.sseinfo.com/qaDetail.do?stockcode={code}&id={iid}" if code else "",
+            "link": f"https://sns.sseinfo.com/company.do?stockcode={code}" if code else "",
         })
     return items
 
