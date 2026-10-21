@@ -3,7 +3,14 @@
 <title>A股互动问答关键词监控</title>
 <link>https://github.com/liuchao88/hudong-rss</link>
 <description>深交所互动易 + 上证e互动 董秘回答关键词监控（自动生成）</description>
-<lastBuildDate>Wed, 21 Oct 2026 18:20:22 +0800</lastBuildDate>
+<lastBuildDate>Wed, 21 Oct 2026 20:20:24 +0800</lastBuildDate>
+<item>
+<title>[上证e互动][玲珑轮胎601966][涨价、提价] 玲珑轮胎(601966) 请问国内五大基地整体产能利用率是否稳步提升？吉林玲珑当前利用率大概到什么水</title>
+<link>https://sns.sseinfo.com/company.do?stockcode=601966</link>
+<guid isPermaLink="false">sse_1797959</guid>
+<pubDate>Wed, 21 Oct 2026 14:20:20 +0800</pubDate>
+<description><b>上证e互动</b> | 玲珑轮胎 (601966) | 命中关键词: 涨价、提价<br/><b>问:</b> 玲珑轮胎(601966) 请问国内五大基地整体产能利用率是否稳步提升？吉林玲珑当前利用率大概到什么水平？三季度吉林玲珑亏损是否好转、是否实现盈亏平衡？招远、德州、柳州、荆门基地是否稳定盈利？近期国内轮胎涨价落地进度如何，多久能反映到国内毛利？国内利用率改善但盈利偏弱，主要是吉林折旧拖累，还是提价传导滞后赶不上原料成本？ 6小时前<br/><b>答:</b> 尊敬的投资者，您好！公司前三季度的综合产能利用率高于行业平均水平（根据《隆众资讯轮胎月报》统计，26年9月中国样本企业半钢及全钢产能利用率在57%-59%之间）；吉林玲珑三季度产能利用率环比二季度有所提升；三季度经营情况敬请关注公司后续发布的2026年三季度定期报告；二季度以来公司国内零售市场已有多轮涨价且执行情况较好，但配套提价传导滞后，总体原材料成本涨幅高于产品售价涨幅，导致盈利承压。感谢您的关注！</description>
+</item>
 <item>
 <title>[上证e互动][中创股份688695][国产替代、规模化] 中创股份(688695) 您好，公司产品截止目前在国内的排名是多少？在国产替代方面，公司接下来如何发</title>
 <link>https://sns.sseinfo.com/company.do?stockcode=688695</link>
@@ -2196,12 +2203,5 @@
 <guid isPermaLink="false">szse_2381952115871711232</guid>
 <pubDate>Mon, 19 Oct 2026 15:59:18 +0800</pubDate>
 <description><b>深交所互动易</b> | 广博股份 (002103) | 命中关键词: AI<br/><b>问:</b> 最近ai短剧青云山剑宗云糯糯爆火，公司有没有开发人偶相关产品<br/><b>答:</b> 您好！截至目前，公司尚未与上述IP合作开发相关人偶产品。对于IP衍生品项目，公司会结合IP授权条件、市场热度、成本收益等因素综合评估，审慎判断。感谢您的关注！</description>
-</item>
-<item>
-<title>[深交所互动易][乾照光电300102][光芯片、DFB] 贵公司CW DFB光芯片都有哪些专利，是否产生兴业收入。与兄弟公司的合作内容，包含哪些。与兄弟公司合</title>
-<link>https://irm.cninfo.com.cn/newircs/question/questionDetail?questionId=2344195685264625664</link>
-<guid isPermaLink="false">szse_2344195685264625664</guid>
-<pubDate>Mon, 19 Oct 2026 15:59:15 +0800</pubDate>
-<description><b>深交所互动易</b> | 乾照光电 (300102) | 命中关键词: 光芯片、DFB<br/><b>问:</b> 贵公司CW DFB光芯片都有哪些专利，是否产生兴业收入。与兄弟公司的合作内容，包含哪些。与兄弟公司合作有哪些优势？<br/><b>答:</b> 公司与兄弟公司的合作，可形成&quot;上游芯片制造+中游模块封装集成&quot;的集团内产业链，缩短产品验证周期、降低市场导入成本。但该业务的产业化进程、未来订单和经营效益存在较大不确定性，敬请投资者关注相关风险。</description>
 </item>
 </channel></rss>
