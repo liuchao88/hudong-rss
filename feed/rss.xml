@@ -3,7 +3,14 @@
 <title>A股互动问答关键词监控</title>
 <link>https://github.com/liuchao88/hudong-rss</link>
 <description>深交所互动易 + 上证e互动 董秘回答关键词监控（自动生成）</description>
-<lastBuildDate>Sun, 25 Oct 2026 16:20:24 +0800</lastBuildDate>
+<lastBuildDate>Sun, 25 Oct 2026 20:20:23 +0800</lastBuildDate>
+<item>
+<title>[深交所互动易][银轮股份002126][量产、数据中心、液冷] 近期没有获取北美业务相关订单吗</title>
+<link>https://irm.cninfo.com.cn/newircs/question/questionDetail?questionId=2388026205959335936</link>
+<guid isPermaLink="false">szse_2388026205959335936</guid>
+<pubDate>Sun, 25 Oct 2026 18:59:35 +0800</pubDate>
+<description><b>深交所互动易</b> | 银轮股份 (002126) | 命中关键词: 量产、数据中心、液冷<br/><b>问:</b> 近期没有获取北美业务相关订单吗<br/><b>答:</b> 您好，公司目前在北美区域传统业务覆盖乘用车，商用车与非道路机械，近年来拓展了发电机组，数据中心液冷等新领域业务，新领域业务是公司重点拓展方向，发电机组业务已经获得多个品类量产订单，数据中心液冷方面正在与多家客户积极推进中，谢谢！</description>
+</item>
 <item>
 <title>[深交所互动易][TCL中环002129][出口限制] 公司中东项目进展如何，是否受本次出口限制影响？</title>
 <link>https://irm.cninfo.com.cn/newircs/question/questionDetail?questionId=2385686726804221952</link>
@@ -2236,12 +2243,5 @@
 <guid isPermaLink="false">sse_1794214</guid>
 <pubDate>Wed, 21 Oct 2026 14:20:27 +0800</pubDate>
 <description><b>上证e互动</b> | 石英股份 (603688) | 命中关键词: 石英<br/><b>问:</b> 石英股份(603688) 公司半导体业务营收已过半，但二季度机构近乎清仓减持，市场普遍认为与信息透明度不足有关。公司多次以“商业机密”为由未披露半导体业务具体进展，导致机构难以评估真实价值。请问公司是否计划建立更系统化的机构沟通机制，如定期举办投资者交流会、主动邀请机构调研、或增加半导体业务自愿性披露？以改善市场认知，吸引长期资金配置。 2026年10月08日 09:19<br/><b>答:</b> 尊敬的投资者，您好！公司高度重视投资者沟通，通过业绩说明会、上证e互动、专线电话、邮箱渠道保持良性互动。半导体业务客户名称、认证细节及订单信息涉及商业秘密，不便单独披露，经营情况已在定期报告中按分行业口径如实披露。关于举办投资者交流会、增加自愿性披露等建议，公司将结合监管要求及公司实际统筹研究，持续优化沟通机制。谢谢！</description>
-</item>
-<item>
-<title>[上证e互动][石英股份603688][供不应求、石英] 石英股份(603688) 贵公司产品目前是产能过剩，还是供不应求 2026年09月23日 15:54</title>
-<link>https://sns.sseinfo.com/company.do?stockcode=603688</link>
-<guid isPermaLink="false">sse_1792143</guid>
-<pubDate>Wed, 21 Oct 2026 14:20:27 +0800</pubDate>
-<description><b>上证e互动</b> | 石英股份 (603688) | 命中关键词: 供不应求、石英<br/><b>问:</b> 石英股份(603688) 贵公司产品目前是产能过剩，还是供不应求 2026年09月23日 15:54<br/><b>答:</b> 尊敬的投资者，您好！公司采取“按单生产”为主与常规产品“按库存生产”相结合的生产模式，营销部门定期与计划部讨论市场变化以便及时调整“按库存生产”的产品清单，满足不同客户、不同时期的需求，快速应对市场变化。谢谢！</description>
 </item>
 </channel></rss>
