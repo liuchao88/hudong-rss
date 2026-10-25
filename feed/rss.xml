@@ -3,7 +3,14 @@
 <title>A股互动问答关键词监控</title>
 <link>https://github.com/liuchao88/hudong-rss</link>
 <description>深交所互动易 + 上证e互动 董秘回答关键词监控（自动生成）</description>
-<lastBuildDate>Sat, 24 Oct 2026 18:20:21 +0800</lastBuildDate>
+<lastBuildDate>Sun, 25 Oct 2026 16:20:24 +0800</lastBuildDate>
+<item>
+<title>[深交所互动易][TCL中环002129][出口限制] 公司中东项目进展如何，是否受本次出口限制影响？</title>
+<link>https://irm.cninfo.com.cn/newircs/question/questionDetail?questionId=2385686726804221952</link>
+<guid isPermaLink="false">szse_2385686726804221952</guid>
+<pubDate>Sun, 25 Oct 2026 14:50:55 +0800</pubDate>
+<description><b>深交所互动易</b> | TCL中环 (002129) | 命中关键词: 出口限制<br/><b>问:</b> 公司中东项目进展如何，是否受本次出口限制影响？<br/><b>答:</b> 您好，受复杂国际局势影响，公司将对重点国家和地区进一步论证和评估，审慎坚定推进全球化战略。如有达到披露标准的进展情况，公司将依法依规及时履行信息披露义务，感谢您的关注！</description>
+</item>
 <item>
 <title>[深交所互动易][紫光股份000938][数据中心、数据中心建设] 请问贵司目前海外业务拓展如何，能否实现今年翻倍的目标。</title>
 <link>https://irm.cninfo.com.cn/newircs/question/questionDetail?questionId=2387528676712775680</link>
@@ -2236,12 +2243,5 @@
 <guid isPermaLink="false">sse_1792143</guid>
 <pubDate>Wed, 21 Oct 2026 14:20:27 +0800</pubDate>
 <description><b>上证e互动</b> | 石英股份 (603688) | 命中关键词: 供不应求、石英<br/><b>问:</b> 石英股份(603688) 贵公司产品目前是产能过剩，还是供不应求 2026年09月23日 15:54<br/><b>答:</b> 尊敬的投资者，您好！公司采取“按单生产”为主与常规产品“按库存生产”相结合的生产模式，营销部门定期与计划部讨论市场变化以便及时调整“按库存生产”的产品清单，满足不同客户、不同时期的需求，快速应对市场变化。谢谢！</description>
-</item>
-<item>
-<title>[上证e互动][石英股份603688][石英] 石英股份(603688) 国内已有壹石通、凯盛科技等企业在合成石英砂领域加速追赶。请问公司如何看待这</title>
-<link>https://sns.sseinfo.com/company.do?stockcode=603688</link>
-<guid isPermaLink="false">sse_1794216</guid>
-<pubDate>Wed, 21 Oct 2026 14:20:27 +0800</pubDate>
-<description><b>上证e互动</b> | 石英股份 (603688) | 命中关键词: 石英<br/><b>问:</b> 石英股份(603688) 国内已有壹石通、凯盛科技等企业在合成石英砂领域加速追赶。请问公司如何看待这些竞争对手的进展？在天然砂提纯和合成砂两条路线上，公司的差异化优势是什么？ 2026年10月08日 09:18<br/><b>答:</b> 尊敬的投资者，您好！您提到的其他企业合成石英砂的发展情况，我们无法获知很具体的信息。天然砂提纯和合成砂这两条线的生产工艺完全不同，天然石英砂的主要原料是矿石，合成砂的主要原料是化学材料。谢谢！</description>
 </item>
 </channel></rss>
