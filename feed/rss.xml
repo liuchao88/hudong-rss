@@ -3,7 +3,14 @@
 <title>A股互动问答关键词监控</title>
 <link>https://github.com/liuchao88/hudong-rss</link>
 <description>深交所互动易 + 上证e互动 董秘回答关键词监控（自动生成）</description>
-<lastBuildDate>Tue, 17 Nov 2026 18:20:26 +0800</lastBuildDate>
+<lastBuildDate>Tue, 17 Nov 2026 20:20:35 +0800</lastBuildDate>
+<item>
+<title>[深交所互动易][国投丰乐000713][AI] 贵公司买了10几口电饭煲煮米饭，搞个什么品鉴，这不是浪费时间？其他种业公司AI育种都研究出来了，贵公</title>
+<link>https://irm.cninfo.com.cn/newircs/question/questionDetail?questionId=2405841816235933696</link>
+<guid isPermaLink="false">szse_2405841816235933696</guid>
+<pubDate>Tue, 17 Nov 2026 18:42:34 +0800</pubDate>
+<description><b>深交所互动易</b> | 国投丰乐 (000713) | 命中关键词: AI<br/><b>问:</b> 贵公司买了10几口电饭煲煮米饭，搞个什么品鉴，这不是浪费时间？其他种业公司AI育种都研究出来了，贵公司搞品鉴是能品出新品种？10几口电饭煲不要钱？科研人员时间不要钱？直接日常食用不能起到品鉴作用？<br/><b>答:</b> 感谢您的关注</description>
+</item>
 <item>
 <title>[上证e互动][华丰科技688629][量产、AI、连接器、数据中心] 华丰科技(688629) 尊敬的董秘，您好，根据公司公开资料，贵公司于9月份参加了阿里云栖大会，从去</title>
 <link>https://sns.sseinfo.com/company.do?stockcode=688629</link>
@@ -2180,12 +2187,5 @@
 <guid isPermaLink="false">sse_1798143</guid>
 <pubDate>Fri, 13 Nov 2026 17:36:25 +0800</pubDate>
 <description><b>上证e互动</b> | 华特气体 (688268) | 命中关键词: 量产<br/><b>问:</b> 华特气体(688268) 董秘您好，对于氦气来说总杂质是关键，如果总杂质按ppm来算，请问公司可以做到多少ppm，稳定量产能做到多少ppm 2026年10月22日 08:55<br/><b>答:</b> 尊敬的投资者，您好！行业内一般定义5N为高纯氦，5N5以上为超高纯氦，公司遵循行业一般规定命名产品。N是英文 “Nine”（表示 “9”）的缩写，用于表示气体纯度中 “9” 的个数，代表气体的纯净程度。 数字越大，纯度越高，杂质含量越低。 5N 气体含义： 纯度为 99.999%（即 5 个 9），杂质总含量≤10ppm（ppm 为百万分之一）。感谢您的关注。</description>
-</item>
-<item>
-<title>[上证e互动][至纯科技603690][国产替代、HBM] 至纯科技(603690) 你好，贵司S300-D（12 寸单片湿法平台）是当前公司对标 HBM、3D</title>
-<link>https://sns.sseinfo.com/company.do?stockcode=603690</link>
-<guid isPermaLink="false">sse_1801853</guid>
-<pubDate>Fri, 13 Nov 2026 17:34:25 +0800</pubDate>
-<description><b>上证e互动</b> | 至纯科技 (603690) | 命中关键词: 国产替代、HBM<br/><b>问:</b> 至纯科技(603690) 你好，贵司S300-D（12 寸单片湿法平台）是当前公司对标 HBM、3D 堆叠的主力平台，支持工艺：SPM 高温硫酸清洗，背面蚀刻 Backside Etch（HBM 减薄后背面刚需）， Pre-clean 预清洗， BEVEL 斜边清洗 / 边缘处理，Finetch 精细清洗、单片磷酸清洗， 目前该设备技术路线是 日韩路线 还是欧美路线工艺? 是否可以平替日韩进口设备？ 2026年11月02日 10:23<br/><b>答:</b> 您好，公司湿法设备技术路线与国际主流路线接轨，主要对标日系大厂的技术路径，并结合国内客户工艺需求自主研发。公司S300-D设备平台支持 12 英寸晶圆制造，可覆盖至 14 纳米及以下制程，可满足先进工艺要求，也完全可以支持存储的需求。公司在湿法清洗领域可实现国产替代，相关设备已交付给多家国内主流晶圆厂。公司研发投入基于客户需求，旨在提升国产化替代能力 。目前公司在 28 纳米节点设备开发已经全部完成，且全工艺机台均有订单，在更先进制程节点也已取得部分工艺订单。</description>
 </item>
 </channel></rss>
