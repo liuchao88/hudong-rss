@@ -3,7 +3,14 @@
 <title>A股互动问答关键词监控</title>
 <link>https://github.com/liuchao88/hudong-rss</link>
 <description>深交所互动易 + 上证e互动 董秘回答关键词监控（自动生成）</description>
-<lastBuildDate>Wed, 18 Nov 2026 18:20:25 +0800</lastBuildDate>
+<lastBuildDate>Wed, 18 Nov 2026 20:20:28 +0800</lastBuildDate>
+<item>
+<title>[深交所互动易][紫光国微002049][量产、SoC] 紫光同芯与北汽联合做soc芯片还是算力1000tops,公司有这个技术积累吗？集团层面展锐好像算力也</title>
+<link>https://irm.cninfo.com.cn/newircs/question/questionDetail?questionId=2403884134051364864</link>
+<guid isPermaLink="false">szse_2403884134051364864</guid>
+<pubDate>Wed, 18 Nov 2026 19:06:11 +0800</pubDate>
+<description><b>深交所互动易</b> | 紫光国微 (002049) | 命中关键词: 量产、SoC<br/><b>问:</b> 紫光同芯与北汽联合做soc芯片还是算力1000tops,公司有这个技术积累吗？集团层面展锐好像算力也达不到这么大，还有别的同行今年都量产了，你们预计两年后量产，是不是布局太晚了。<br/><b>答:</b> 您好！近日公司全资子公司紫光同芯微电子有限公司（以下简称“紫光同芯”）与北汽集团旗下北汽研究总院签署战略合作协议，将围绕先进车规工艺舱驾一体SoC芯片开展联合研发。依托紫光同芯在安全芯片领域的长期积累与汽车电子研发、量产经验，以及北汽研究总院在整车定义与系统集成方面的优势，双方将共同打造面向智能汽车的系统级解决方案，加快相关技术和产品在整车场景中的应用落地。感谢您的关注！</description>
+</item>
 <item>
 <title>[上证e互动][依顿电子603328][PCB] 依顿电子(603328) 现在机构投资者都倾向于pcb景气度处于历史高位，行业热度将逐渐下降，未来会</title>
 <link>https://sns.sseinfo.com/company.do?stockcode=603328</link>
@@ -2170,12 +2177,5 @@
 <guid isPermaLink="false">szse_2401882747594735616</guid>
 <pubDate>Fri, 13 Nov 2026 19:58:09 +0800</pubDate>
 <description><b>深交所互动易</b> | 协创数据 (300857) | 命中关键词: AI<br/><b>问:</b> CRWV称行业会经历整合潮。考虑推理卡将来不一定会稀缺了，贵司是否考虑过通过兼并购方式继续加强在高端训练卡这方面的竞争力？<br/><b>答:</b> 您好，公司持续关注 AI 算力行业发展趋势与行业整合机遇，围绕算力云服务主业夯实高端训练算力供给、集群运维、训推一体化等核心能力。公司严格按照信息披露规则履行信息披露义务，相关进展请以公司公告、定期报告为准。感谢您的关注。</description>
-</item>
-<item>
-<title>[深交所互动易][紫光股份000938][大模型、AI、国产GPU、超节点] 董秘您好！请问公司有超节点产品吗？相关产品主要应用于哪些场景？</title>
-<link>https://irm.cninfo.com.cn/newircs/question/questionDetail?questionId=2402849125705318400</link>
-<guid isPermaLink="false">szse_2402849125705318400</guid>
-<pubDate>Fri, 13 Nov 2026 19:10:20 +0800</pubDate>
-<description><b>深交所互动易</b> | 紫光股份 (000938) | 命中关键词: 大模型、AI、国产GPU、超节点<br/><b>问:</b> 董秘您好！请问公司有超节点产品吗？相关产品主要应用于哪些场景？<br/><b>答:</b> 您好，公司推出的UniPoD S80000超节点覆盖32卡至1024卡全系列，最高可弹性扩展至16384卡，大幅提升训练性能和推理性能。近期，公司又推出了以国产GPU为算力核心的机架级全互联智算旗舰UniPoD S81000 X1超节点，单Scale-Up域最大支持40张国产加速卡，通过4个Scale-Up专用交换Tray实现一级CLOS全互联拓扑。公司与多家头部互联网厂商持续推进大规模算力集群与超节点系统建设，支持其核心业务及新型AI应用场景落地，显著提升数据中心的算力密度及资源利用率。超节点的需求不仅集中在大型互联网企业，其他互联网厂商也正积极开展相关测试；运营商已进入测试阶段；在金融领域，头部银行等金融机构正在推进测试验证工作；一些大模型公司以及电力行业的大型企业也有较强的需求意愿。</description>
 </item>
 </channel></rss>
